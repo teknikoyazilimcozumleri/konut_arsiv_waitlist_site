@@ -1,0 +1,70 @@
+---
+import SITE from "../config/site.mjs";
+---
+
+<section id="contact" class="pt-12">
+    <div class="max-w-7xl mx-auto space-y-2">
+        <form class="space-y-2" action="https://api.web3forms.com/submit" method="POST" id="form">
+                <!-- Your Access key here. Don't worry this can be public -->
+                <input type="hidden" name="access_key" value="63935025-60ac-487b-8967-09aa7520c119">
+
+                <!-- Optional: Can be type="hidden" or type="text" for subject -->
+                <input type="hidden" name="subject" value="New Website Submission">
+
+                <!-- Optional: From Name you want to see in the email
+                    Default is "Notifications". you can overwrite here -->
+                <input type="hidden" name="from_name" value="Notifications">
+
+                <!-- Optional: Redirect URL after form submission -->
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+            <div class="grid grid-cols-1 gap-8">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">E-posta *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-800 focus:border-transparent transition-all duration-200"
+                        placeholder="ornek@email.com"
+                    />
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1gap-8">
+                <div>
+                    <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Şirket *</label>
+                    <input 
+                        type="text" 
+                        id="company" 
+                        name="company" 
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-800 focus:border-transparent transition-all duration-200"
+                        placeholder="Şirket adınız"
+                    />
+                </div>
+            </div>
+            
+            <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mesaj *</label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="6" 
+                    required 
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-800 focus:border-transparent transition-all duration-200 resize-none"
+                    placeholder="Projeniz hakkında detaylı bilgi verin..."
+                ></textarea>
+            </div>
+            
+            <div class="text-center mb-10">
+                <button 
+                    type="submit" 
+                    class="inline-block px-12 py-4 bg-black text-white font-semibold text-sm tracking-widest uppercase rounded-lg transition-all duration-300 hover:bg-red-900 hover:-translate-y-0.5 focus:ring-2 focus:ring-red-800 focus:ring-offset-2"
+                >
+                    Gönder
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
