@@ -15,14 +15,14 @@ import { SITE } from "../config/site.mjs";
         href={SITE.downloadUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 px-8 py-3 bg-[#ff3131] text-white rounded-lg hover:bg-[#0f2f76] transition-colors font-medium"
+        class="inline-flex items-center gap-2 px-6 py-2.5 text-base bg-[#ff3131] text-white rounded-lg hover:bg-[#0f2f76] transition-colors font-medium leading-none"
         aria-label="KonutArşiv'i İndir"
         data-download-link
         data-ios-url={SITE.iosDownloadUrl}
         data-android-url={SITE.androidDownloadUrl}
         data-fallback-url={SITE.downloadUrl}
       >
-        <Icon name="tabler:download" class="w-5 h-5" aria-hidden="true" />
+        <Icon name="tabler:download" class="w-4 h-4" aria-hidden="true" />
         <span>İndir</span>
       </a>
       <a
