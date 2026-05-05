@@ -7,10 +7,13 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { SITE } from "./src/config/site.mjs";
 
+const base = process.env.ASTRO_BASE_PATH || "/";
+
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
   site: SITE.url,
+  base,
   integrations: [icon()],
   vite: {
     plugins: [tailwindcss()],

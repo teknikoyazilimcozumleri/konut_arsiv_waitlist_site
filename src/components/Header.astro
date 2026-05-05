@@ -1,6 +1,9 @@
 ---
 import { Icon } from "astro-icon/components";
 import { SITE } from "../config/site.mjs";
+
+const baseUrl = import.meta.env.BASE_URL;
+const logoSrc = `${baseUrl}konutarsivlogo.svg`;
 ---
 
 <header
@@ -16,7 +19,7 @@ import { SITE } from "../config/site.mjs";
       class="text-2xl font-bold text-gray-900 hover:text-gray-700 transition-colors"
       aria-label="KonutArşiv - Home"
     >
-      <img src="/konutarsivlogo.svg" alt="KonutArşiv" class="h-8 scale-200 w-auto" />
+      <img src={logoSrc} alt="KonutArşiv" class="h-8 scale-200 w-auto" />
     </a>
     
     <!-- Mobile menu button -->
