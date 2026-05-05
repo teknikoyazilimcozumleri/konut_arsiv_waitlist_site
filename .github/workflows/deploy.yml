@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install terser for Vite build
+        run: npm install --no-save terser
+
       - name: Build Astro
         run: npm run build
 
