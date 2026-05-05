@@ -27,12 +27,12 @@ export const OZELLIKLER = [
     title: "Finansal raporlama",
     description: "Finansal durumunuzu detaylı raporlarla takip edin.",
     icon: "chart-bar",
-    image: "assets/finansalreporlama.png"
+    image: "assets/finansalraporlama.png"
   },
   {
     title: "Kiracılarla iletişim",
     description: "Kiracılarla kolay ve etkili bir şekilde iletişim kurun.",
     icon: "message-circle",
-    image: ""
+    image: "assets/sohbet.png"
   }
 ];
