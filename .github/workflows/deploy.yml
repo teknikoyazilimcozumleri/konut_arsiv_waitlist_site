@@ -13,7 +13,7 @@ permissions:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  ASTRO_BASE_PATH: /konut_arsiv_waitlist_site
+  ASTRO_BASE_PATH: /${{ github.event.repository.name }}
 
 jobs:
   build:
