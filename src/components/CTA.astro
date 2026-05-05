@@ -1,5 +1,5 @@
 ---
-import ScrollReveal from "./ScrollReveal.tsx";
+import { SITE } from "../config/site.mjs";
 import { Icon } from "astro-icon/components";
 ---
 
@@ -11,7 +11,7 @@ import { Icon } from "astro-icon/components";
         template.
       </p>
       <a
-        href="https://github.com/teknikoyazilimcozumleri/astro-website-template"
+        href={SITE.downloadUrl}
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center gap-2 px-8 py-3 bg-[#ff3131] text-white rounded-lg hover:bg-[#0f2f76] transition-colors font-medium"
