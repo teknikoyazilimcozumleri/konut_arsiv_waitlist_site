@@ -1,8 +1,8 @@
 export const SITE = {
-  title: "Tekniko Yazılım Çözümleri Şablonu",
+  title: "KonutArşiv",
   description: "",
   defaultLanguage: "en",
-  url: "https://teknikoyazilimcozumleri.example.com", // Update this with your actual site URL
+  url: "https://konutarsiv.com", // Update this with your actual site URL
   author: "Tekniko Yazılım Çözümleri",
   ogImage: "/og-image.png", // Add this image to your public folder
   // Web3Forms: Get your access key from https://web3forms.com
