@@ -2,21 +2,28 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import ContactForm from "../components/ContactForm.astro";
 import { SITE } from "../config/site.mjs";
 ---
 
 <Layout
-  title={`Contact | ${SITE.title}`}
-  description="Get in touch with us. We'd love to hear from you about Astro Base or any questions you may have."
-  canonicalURL={`${SITE.url}/contact`}
+  title={`İletişim | ${SITE.title}`}
+  description="Sorularınız, problemleriniz veya destek talepleriniz için bizimle iletişime geçin."
+  canonicalURL={`${SITE.url}/iletisim`}
 >
   <Header />
   <main id="main-content" role="main">
-    <section class="max-w-2xl mx-auto pt-20">
-      <h1 class="text-5xl font-bold text-gray-900">Contact</h1>
-      <p class="text-xl text-gray-600 pt-4">Get in touch with us. We'd love to hear from you.</p>      
-      <ContactForm />
+    <section class="max-w-2xl mx-auto py-20">
+      <h1 class="text-5xl font-bold text-gray-900">İletişim</h1>
+      <p class="text-xl text-gray-600 pt-4">
+        Sorularınız mı var, bir problem mi yaşıyorsunuz ya da desteğe mi ihtiyacınız var? Bize
+        <a
+          href="mailto:info@teknikoyazilimcozumleri.com"
+          class="text-[#0f2f76] font-semibold hover:text-[#ff3131] transition-colors"
+        >
+          {" "}info@teknikoyazilimcozumleri.com
+        </a>
+        {" "}adresinden e-posta gönderin.
+      </p>
     </section>
   </main>
   <Footer />

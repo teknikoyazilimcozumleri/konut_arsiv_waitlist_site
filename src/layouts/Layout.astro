@@ -92,5 +92,38 @@ const robotsContent = [
 			Skip to main content
 		</a>
 		<slot />
+		<script is:inline>
+			const getDeviceStoreUrl = (linkEl) => {
+				const ua = navigator.userAgent || navigator.vendor || "";
+				const platform = navigator.platform || "";
+				const maxTouchPoints = navigator.maxTouchPoints || 0;
+
+				// iPadOS 13+ can report itself as Mac; include touchpoint check.
+				const isIOS = /iPad|iPhone|iPod/i.test(ua) || (platform === "MacIntel" && maxTouchPoints > 1);
+				const isAndroid = /Android/i.test(ua);
+
+				const iosUrl = linkEl.dataset.iosUrl;
+				const androidUrl = linkEl.dataset.androidUrl;
+				const fallbackUrl = linkEl.dataset.fallbackUrl || linkEl.getAttribute("href") || "/";
+
+				if (isIOS && iosUrl) return iosUrl;
+				if (isAndroid && androidUrl) return androidUrl;
+				return fallbackUrl;
+			};
+
+			const initDownloadLinks = () => {
+				const downloadLinks = document.querySelectorAll("a[data-download-link]");
+				downloadLinks.forEach((linkEl) => {
+					const destination = getDeviceStoreUrl(linkEl);
+					linkEl.setAttribute("href", destination);
+				});
+			};
+
+			if (document.readyState === "loading") {
+				document.addEventListener("DOMContentLoaded", initDownloadLinks);
+			} else {
+				initDownloadLinks();
+			}
+		</script>
 	</body>
 </html>

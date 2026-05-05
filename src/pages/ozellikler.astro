@@ -2,23 +2,79 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import FeaturesComponent from "../components/Features.astro";
+import { Icon } from "astro-icon/components";
+import type { ImageMetadata } from "astro";
+import { OZELLIKLER } from "../config/ozellikler.mjs";
 import { SITE } from "../config/site.mjs";
+
+const imageModules = import.meta.glob("../assets/*.{png,jpg,jpeg,webp,svg}", {
+  eager: true,
+  import: "default",
+}) as Record<string, string | ImageMetadata>;
 ---
 
 <Layout
-  title={`Features | ${SITE.title}`}
+  title={`Özellikler | ${SITE.title}`}
   description="Discover all the features included in Astro Base: React, Tailwind CSS, Astro Icons, Sass"
-  canonicalURL={`${SITE.url}/features`}
+  canonicalURL={`${SITE.url}/ozellikler`}
 >
   <Header />
   <main id="main-content" role="main">
     <section class="max-w-6xl mx-auto px-4 py-20">
-      <h1 class="text-5xl font-bold text-gray-900 mb-4">Features</h1>
-      <p class="text-xl text-gray-600 mb-12">
-        The features that you need to get going quickly
+      <h1 class="text-4xl md:text-5xl font-bold text-[#0f2f76] mb-4">Özellikler</h1>
+      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+        KonutArşiv ile tüm operasyonlarınızı tek bir noktadan daha hızlı, daha düzenli ve daha güvenli şekilde yönetin.
       </p>
-      <FeaturesComponent />
+
+      <div class="space-y-5 md:space-y-6">
+        {
+          OZELLIKLER.map((ozellik, index) => {
+            const rawImage = ozellik.image?.trim();
+            const resolvedImagePath = rawImage ? `../${rawImage}` : "";
+            const resolvedModule = resolvedImagePath ? imageModules[resolvedImagePath] : undefined;
+            const localImageSrc =
+              typeof resolvedModule === "string" ? resolvedModule : resolvedModule?.src;
+            const imageSrc =
+              localImageSrc ||
+              (rawImage && (rawImage.startsWith("/") || rawImage.startsWith("http")) ? rawImage : "") ||
+              "";
+            const isImageRight = index % 2 === 0;
+
+            return (
+              <article
+                class={`rounded-3xl bg-[#f3f3f3] overflow-hidden flex flex-col ${
+                  isImageRight ? "md:flex-row-reverse" : "md:flex-row"
+                }`}
+              >
+                <div class="md:w-[48%] bg-slate-200">
+                  {
+                    imageSrc ? (
+                      <img
+                        src={imageSrc}
+                        alt={`${ozellik.title} görseli`}
+                        class="h-72 sm:h-72 md:h-96 w-full object-contain"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div class="h-56 sm:h-64 md:h-72 w-full flex items-center justify-center text-slate-500 text-sm">
+                        Görsel yakında eklenecek
+                      </div>
+                    )
+                  }
+                </div>
+
+                <div class="md:w-[52%] p-5 md:p-6 flex flex-col justify-center">
+                  <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-2 text-black">
+                    <Icon name={`tabler:${ozellik.icon}`} class="w-6 h-6" aria-hidden="true" />
+                  </div>
+                  <h2 class="text-2xl font-semibold text-black mb-2">{ozellik.title}</h2>
+                  <p class="text-base text-gray-700 leading-relaxed">{ozellik.description}</p>
+                </div>
+              </article>
+            );
+          })
+        }
+      </div>
     </section>
   </main>
   <Footer />

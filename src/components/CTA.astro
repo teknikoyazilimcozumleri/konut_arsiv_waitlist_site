@@ -15,6 +15,10 @@ import { Icon } from "astro-icon/components";
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center gap-2 px-8 py-3 bg-[#ff3131] text-white rounded-lg hover:bg-[#0f2f76] transition-colors font-medium"
+        data-download-link
+        data-ios-url={SITE.iosDownloadUrl}
+        data-android-url={SITE.androidDownloadUrl}
+        data-fallback-url={SITE.downloadUrl}
       >
         <Icon name="tabler:download" class="w-5 h-5" aria-hidden="true" />
         İndir
