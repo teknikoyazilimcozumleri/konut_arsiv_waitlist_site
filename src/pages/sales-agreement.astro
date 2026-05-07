@@ -1,0 +1,150 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE } from "../config/site.mjs";
+---
+<Layout
+  title={`Mesafeli Satış Sözleşmesi | ${SITE.title}`}
+  description="Mesafeli satış sözleşmesi detayları."
+  canonicalURL={`${SITE.url}/sales-agreement`}
+>
+<Header />
+<section class="max-w-4xl mx-auto my-12 p-8 bg-white border border-slate-200 rounded-xl shadow-sm font-sans text-slate-800 leading-relaxed">
+  <header class="border-b border-slate-100 pb-6 mb-8 text-center">
+    <h1 class="text-3xl font-extrabold text-slate-900 uppercase tracking-tight">Mesafeli Satış Sözleşmesi</h1>
+    <p class="text-sm text-slate-500 mt-2 italic">Son Güncelleme: 07 Mayıs 2026</p>
+  </header>
+
+  <div class="space-y-8">
+    
+    <article>
+      <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center">
+        <span class="bg-slate-900 text-white w-7 h-7 rounded-full inline-flex items-center justify-center text-sm mr-3">1</span>
+        TARAFLAR
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6 ml-10">
+        <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
+          <h3 class="font-semibold text-slate-700 mb-2 underline underline-offset-4 decoration-slate-300">1.1. SATICI</h3>
+          <ul class="text-sm space-y-1">
+            <li><span class="font-medium">Ünvan:</span> Tekniko Yazılım Çözümleri</li>
+            <li><span class="font-medium">Adres:</span>EHLİBEYT MAH. TEKSTİLCİLER CAD. NO:35 İÇ KAPI NO:7 ÇANKAYA/ANKARA</li>
+            <li><span class="font-medium">E-posta:</span>info@teknikoyazilimcozumleri.com</li>
+            <li><span class="font-medium">MERSİS No:</span>0836100146700001</li>
+            <li><span class="font-medium">Ticaret Sicil No:</span>528860</li>
+          </ul>
+        </div>
+        
+        <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
+          <h3 class="font-semibold text-slate-700 mb-2 underline underline-offset-4 decoration-slate-300">1.2. ALICI</h3>
+          <p class="text-sm italic text-slate-600">
+            KonutArşiv platformuna üye olan ve platform üzerinden premium özelliklere erişim için abonelik satın alan gerçek veya tüzel kişidir. Ödeme yapılırken kullanılan iletişim ve kimlik bilgileri esas alınır.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <hr class="border-slate-100" />
+
+    <article>
+      <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center">
+        <span class="bg-slate-900 text-white w-7 h-7 rounded-full inline-flex items-center justify-center text-sm mr-3">2</span>
+        KONU
+      </h2>
+      <p class="ml-10 text-slate-700">
+        İşbu Sözleşme'nin konusu, ALICI'nın SATICI'ya ait internet platformu üzerinden elektronik ortamda siparişini verdiği, nitelikleri ve satış ücreti platformda belirtilen dijital abonelik hizmetinin <strong>(SaaS)</strong> satışı ve teslimi ile ilgili olarak <strong>6502 sayılı Tüketicinin Korunması Hakkında Kanun</strong> ve <strong>Mesafeli Sözleşmeler Yönetmeliği</strong> hükümleri uyarınca tarafların hak ve yükümlülüklerinin belirlenmesidir.
+      </p>
+    </article>
+
+    <article>
+      <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center">
+        <span class="bg-slate-900 text-white w-7 h-7 rounded-full inline-flex items-center justify-center text-sm mr-3">3</span>
+        HİZMET VE ÖDEME BİLGİLERİ
+      </h2>
+      <div class="ml-10 overflow-hidden rounded-lg border border-slate-200">
+        <table class="w-full text-left border-collapse">
+          <tbody class="divide-y divide-slate-200">
+            <tr class="bg-slate-50/50">
+              <th class="py-3 px-4 text-sm font-semibold text-slate-900 w-1/3">Hizmet Adı</th>
+              <td class="py-3 px-4 text-sm">KonutArşiv Premium Aboneliği</td>
+            </tr>
+            <tr>
+              <th class="py-3 px-4 text-sm font-semibold text-slate-900">Abonelik Süresi</th>
+              <td class="py-3 px-4 text-sm text-blue-600 font-medium">Aylık</td>
+            </tr>
+            <tr class="bg-slate-50/50">
+              <th class="py-3 px-4 text-sm font-semibold text-slate-900">Ödeme Şekli</th>
+              <td class="py-3 px-4 text-sm text-slate-600 font-medium">iyzico Altyapısı (Kredi/Banka Kartı)</td>
+            </tr>
+            <tr>
+              <th class="py-3 px-4 text-sm font-semibold text-slate-900">Toplam Bedel</th>
+              <td class="py-3 px-4 text-sm font-bold text-green-700 underline decoration-green-300 underline-offset-2 italic">Ödeme sayfasında onaylanan vergiler dahil ücrettir.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article>
+      <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center">
+        <span class="bg-slate-900 text-white w-7 h-7 rounded-full inline-flex items-center justify-center text-sm mr-3">4</span>
+        GENEL HÜKÜMLER
+      </h2>
+      <div class="ml-10 space-y-3 text-slate-700">
+        <p><strong>4.1.</strong> ALICI, hizmetin temel nitelikleri ve ödeme koşullarını okuduğunu, elektronik ortamda gerekli teyidi verdiğini kabul eder.</p>
+        <p><strong>4.2.</strong> Hizmet, ödeme sonrası dijital ortamda ALICI'nın kullanımına <strong>anında</strong> açılır. Fiziksel bir teslimat yoktur.</p>
+        <p><strong>4.3.</strong> Hesap güvenliğinden bizzat ALICI sorumludur. İhmalden kaynaklanan yetkisiz kullanımlardan SATICI sorumlu tutulamaz.</p>
+        <p><strong>4.4.</strong> SATICI, hizmet içeriğinde güncelleme veya teknik değişiklik yapma hakkını saklı tutar.</p>
+      </div>
+    </article>
+
+    <article class="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-400">
+      <h2 class="text-xl font-bold text-orange-900 mb-4 flex items-center">
+        <span class="bg-orange-600 text-white w-7 h-7 rounded-full inline-flex items-center justify-center text-sm mr-3">5</span>
+        CAYMA HAKKI
+      </h2>
+      <div class="ml-10 text-orange-900 text-sm md:text-base leading-relaxed">
+        <p class="mb-3 italic">
+          Mesafeli Sözleşmeler Yönetmeliği'nin 15. maddesinin 1. fıkrasının (ğ) bendi uyarınca:
+        </p>
+        <blockquote class="bg-white/50 p-3 border border-orange-100 rounded mb-3 font-medium">
+          "Elektronik ortamda anında ifa edilen hizmetler veya tüketiciye anında teslim edilen gayrimaddi mallara ilişkin sözleşmelerde" tüketicinin cayma hakkı bulunmamaktadır.
+        </blockquote>
+        <p>
+          ALICI, hizmetin anında ifa edildiğini ve premium özelliklerin kullanımına sunulmasından itibaren <strong>cayma hakkını kullanamayacağını ve ücret iadesi talep edemeyeceğini</strong> peşinen kabul ve beyan eder.
+        </p>
+      </div>
+    </article>
+
+    <article>
+      <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center">
+        <span class="bg-slate-900 text-white w-7 h-7 rounded-full inline-flex items-center justify-center text-sm mr-3">6</span>
+        SÜRE VE FESİH
+      </h2>
+      <div class="ml-10 space-y-2 text-slate-700">
+        <p><strong>6.1.</strong> Abonelik, başarılı ödeme ile başlar ve seçilen dönem boyunca devam eder.</p>
+        <p><strong>6.2.</strong> ALICI, aboneliğini dilediği zaman iptal edebilir. İptal, fatura döneminin sonunda geçerli olur; <strong>kısmi iade yapılmaz.</strong></p>
+        <p><strong>6.3.</strong> Kullanım koşullarının ihlali durumunda SATICI, hizmeti tek taraflı sonlandırabilir.</p>
+      </div>
+    </article>
+
+    <div class="grid md:grid-cols-2 gap-8 ml-10">
+      <article>
+        <h3 class="font-bold text-slate-900 mb-2 uppercase text-sm tracking-wider underline">7. UYUŞMAZLIKLAR</h3>
+        <p class="text-xs text-slate-600">
+          Ticaret Bakanlığınca ilan edilen değere kadar Tüketici Hakem Heyetleri ile ALICI'nın veya SATICI'nın yerleşim yerindeki Tüketici Mahkemeleri yetkilidir.
+        </p>
+      </article>
+      <article>
+        <h3 class="font-bold text-slate-900 mb-2 uppercase text-sm tracking-wider underline">8. YÜRÜRLÜK</h3>
+        <p class="text-xs text-slate-600 italic">
+          ALICI, platform üzerinden ödemeyi gerçekleştirdiğinde işbu sözleşmenin tüm koşullarını kabul etmiş sayılır. Sözleşme, ödemenin yapıldığı tarihte yürürlüğe girer.
+        </p>
+      </article>
+    </div>
+
+  </div>
+</section>
+<Footer />
+</Layout>

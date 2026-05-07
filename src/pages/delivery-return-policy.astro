@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE } from "../config/site.mjs";
+---
+
+
+<Layout
+  title={`Teslimat ve İade Şartları | ${SITE.title}`}
+  description="Dijital hizmetlerimiz için geçerli teslimat ve iade şartlarını öğrenin."
+  canonicalURL={`${SITE.url}/delivery-return-policy`}
+>
+<Header />
+<section class="max-w-4xl mx-auto my-12 p-8 bg-white border border-slate-200 rounded-xl shadow-sm font-sans text-slate-800 leading-relaxed">
+  <header class="border-b border-slate-100 pb-6 mb-8 text-center">
+    <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight">Teslimat ve İade Şartları</h1>
+    <p class="text-sm text-slate-500 mt-2">Dijital abonelik hizmetimize ilişkin teslimat, iptal ve iade koşulları</p>
+  </header>
+
+  <div class="space-y-6">
+    <article class="p-6 border border-slate-200 rounded-xl bg-slate-50/40">
+      <h2 class="text-lg font-bold text-slate-900 mb-4">1. Dijital Teslimat Süreci</h2>
+      <p class="text-slate-700 mb-4">
+        Hizmetimiz bir <strong>SaaS (Yazılım Hizmeti)</strong> ürünüdür. Ödeme işlemi başarılı olduktan sonra aşağıdaki süreç otomatik olarak uygulanır:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-700 marker:text-slate-400">
+        <li>Premium özellikler hesabınıza <strong>anında</strong> tanımlanır.</li>
+        <li>Fiziksel ürün gönderimi veya kargo süreci bulunmamaktadır.</li>
+        <li>İşlem özeti, kayıtlı e-posta adresinize sistem tarafından iletilir.</li>
+      </ul>
+    </article>
+
+    <article class="p-6 border border-slate-200 rounded-xl">
+      <h2 class="text-lg font-bold text-slate-900 mb-4">2. Abonelik İptal Politikası</h2>
+      <p class="text-slate-700 mb-4">
+        Abonelikler <strong>aylık</strong> dönemler halinde yenilenir. Kullanıcı, bir sonraki dönem yenilemesini dilediği zaman destek e-posta adresimize yazılı talep ile iptal edebilir.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg">
+          <h3 class="font-semibold text-slate-900 text-sm mb-2">Erişim Süresi</h3>
+          <p class="text-sm text-slate-600">
+            İptal sonrası mevcut ödeme döneminin sonuna kadar tüm premium özellikler kullanılmaya devam edilir.
+          </p>
+        </div>
+        <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg">
+          <h3 class="font-semibold text-slate-900 text-sm mb-2">Otomatik Yenileme</h3>
+          <p class="text-sm text-slate-600">
+            İptal işlemi tamamlandığında, bir sonraki fatura döneminde kartınızdan yeni tahsilat yapılmaz.
+          </p>
+        </div>
+      </div>
+      <p class="text-sm text-slate-600 mt-4">
+        İptal taleplerinizi <a class="font-medium text-slate-900 underline underline-offset-2" href="mailto:info@teknikoyazilimcozumleri.com">info@teknikoyazilimcozumleri.com</a> adresine iletebilirsiniz.
+      </p>
+    </article>
+
+    <article class="p-6 border border-amber-200 bg-amber-50 rounded-xl">
+      <h2 class="text-lg font-bold text-amber-900 mb-4">3. İade ve Geri Ödeme</h2>
+      <p class="text-sm text-amber-900">
+        6502 sayılı Kanun uyarınca, <strong>"Elektronik ortamda anında ifa edilen hizmetler"</strong> cayma hakkı istisnası kapsamındadır. Hizmet kullanımının başlaması nedeniyle aylık aboneliklerde kısmi veya tam ücret iadesi yapılmamaktadır.
+      </p>
+      <p class="text-sm text-amber-900 mt-3 font-semibold">
+        İstisna: Teknik bir hata kaynaklı mükerrer çekim durumunda iade işlemi 7 iş günü içinde gerçekleştirilir.
+      </p>
+    </article>
+
+    <article class="mt-4 p-6 bg-slate-900 rounded-xl text-center text-white">
+      <h3 class="text-lg font-bold mb-2">Destek ve İletişim</h3>
+      <p class="text-slate-300 text-sm mb-5">
+        Teslimat, abonelik veya iade süreçleriyle ilgili sorularınız için bize e-posta ile ulaşabilirsiniz.
+      </p>
+      <a
+        href="mailto:info@teknikoyazilimcozumleri.com"
+        class="inline-block bg-white text-slate-900 font-semibold px-6 py-3 rounded-lg hover:bg-slate-100 transition-colors"
+      >
+        info@teknikoyazilimcozumleri.com
+      </a>
+    </article>
+  </div>
+</section>
+
+<Footer />
+</Layout>
