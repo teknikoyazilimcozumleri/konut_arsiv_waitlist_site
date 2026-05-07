@@ -56,6 +56,15 @@ const logoSrc = `${baseUrl}konutarsivlogo.svg`;
       </li>
       <li>
         <a
+          href="/paketler"
+          class="text-[#0f2f76] hover:text-[#ff3131] transition-colors"
+          aria-current={Astro.url.pathname === '/paketler' ? 'page' : undefined}
+        >
+          Paketler
+        </a>
+      </li>
+      <li>
+        <a
           href="/iletisim"
           class="px-4 py-2 bg-[#ff3131] text-white rounded-lg hover:bg-[#0f2f76] transition-colors"
           aria-current={Astro.url.pathname === '/iletisim' ? 'page' : undefined}
